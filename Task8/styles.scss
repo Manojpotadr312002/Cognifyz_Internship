@@ -1,0 +1,41 @@
+// ✅ Variables
+$primary-color: #0d6efd;
+$secondary-color: #ffc107;
+$text-color: #212529;
+$bg-color: #f8f9fa;
+$heading-font: 'Segoe UI', sans-serif;
+
+// ✅ Nesting Example
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $heading-font;
+
+  h1, h2, h3 {
+    color: $primary-color;
+  }
+
+  .btn-custom {
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  form {
+    margin-top: 2rem;
+
+    input, select, textarea {
+      border: 1px solid lighten($primary-color, 20%);
+      border-radius: 6px;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  }
+}
